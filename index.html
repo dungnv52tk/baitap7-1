@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"/>
+<script>
+  function Rectangle(width, height) {
+      this.width = width;
+      this.height = height;
+      this.getArea = function(){
+          return width * height;
+      }
+      this.getChuVi =  function () {
+          return width + height;
+      }
+      this.setWidth = function(newWidth){
+          this.newWidth = newWidth;
+      }
+      this.setHeight = function (newHeight) {
+          this.newHeight = newHeight;
+      }
+
+  }
+
+  let rectangle = document.getElementById('myCanvas');
+  let ctx = rectangle.getContext("2d");
+  ctx.fillStyle = "#F0000";
+  ctx.fillRect(0, 0, 150, 75);
+
+</script>
+</body>
+</html>
